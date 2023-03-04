@@ -53,7 +53,7 @@
         <div>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="Expense_Data">
             </asp:GridView>
-            <asp:SqlDataSource ID="Expense_Data" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Expense_master]" DeleteCommand="DELETE FROM [Expense_master] WHERE [group_id] = @group_id" InsertCommand="INSERT INTO [Expense_master] ([expense_id], [expense_name], [user_id]) VALUES (@expense_id, @expense_name, @user_id)" ProviderName="System.Data.SqlClient" UpdateCommand="UPDATE [Expense_master] SET [expense_id] = @expense_id, [expense_name] = @expense_name, [user_id] = @user_id WHERE [group_id] = @group_id">
+            <asp:SqlDataSource ID="Expense_Data" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT * FROM [Expense_master]" DeleteCommand="DELETE FROM [Expense_master] WHERE [group_id] = @group_id" InsertCommand="INSERT INTO [Expense_master] ([expense_id], [expense_name], [user_id]) VALUES (@expense_id, @expense_name, @user_id)" ProviderName="System.Data.SqlClient" UpdateCommand="UPDATE [Expense_master] SET [expense_id] = @expense_id, [expense_name] = @expense_name, [user_id] = @user_id WHERE [group_id] = @group_id">
                 <DeleteParameters>
                     <asp:Parameter Name="group_id" Type="Int32" />
                 </DeleteParameters>

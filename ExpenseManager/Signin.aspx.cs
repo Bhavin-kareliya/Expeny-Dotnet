@@ -34,7 +34,7 @@ namespace ExpenseManager
             foreach (DataRow dr in dt.Rows)
             {
 
-                if (dr["email"].ToString() == email1.Text && dr["password"].ToString() == password1.Text)
+                if (dr["email"].ToString().Trim() == email1.Text && dr["password"].ToString().Trim() == password1.Text)
                 {
 
                     Session["email"] = email1.Text;

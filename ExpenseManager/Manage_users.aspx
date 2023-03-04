@@ -6,31 +6,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">
     <button id="add_expense_btn" class="btn btn-outline-primary" data-toggle="modal" data-target="#ExpenseModal"  style="margin-bottom:20px">Invite New User</button>
-   <!-- Modal -->
-    <div class="modal fade" id="ExpenseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-       <div class="modal-dialog" role="document">
-           
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Expense</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Enter User Email</label>
-                    <asp:TextBox runat="server" cssClass="form-control" ID="email_invite"></asp:TextBox>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <%--<asp:Button runat="server" cssClass="btn btn-primary" id="submitData" OnClick="onsubmitData_Click" Text="Done" UseSubmitBehavior="false"/>--%>
-                <asp:Button id="submitData" runat="server" CssClass="btn btn-primary" Text="Done" OnClick="submitData_Click"/> 
-            </div>
-        </div>
-        </div>
-    </div>
     
     <h3 style="margin-bottom:20px">Your Expenses</h3>
    
@@ -80,11 +55,11 @@
                 <asp:TemplateField HeaderText="Action" ShowHeader="False">
                     <ItemTemplate>
                         <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="ExpenseUsers" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Users] WHERE [user_id] = @user_id" InsertCommand="INSERT INTO [Users] ([username], [email], [password], [mobile_no]) VALUES (@username, @email, @password, @mobile_no)" SelectCommand="SELECT [user_id], [username], [email], [password], [mobile_no] FROM [Users]" UpdateCommand="UPDATE [Users] SET [username] = @username, [email] = @email, [password] = @password, [mobile_no] = @mobile_no WHERE [user_id] = @user_id">
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="ExpenseUsers" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" DeleteCommand="DELETE FROM [Users] WHERE [user_id] = @user_id" InsertCommand="INSERT INTO [Users] ([username], [email], [password], [mobile_no]) VALUES (@username, @email, @password, @mobile_no)" SelectCommand="SELECT [user_id], [username], [email], [password], [mobile_no] FROM [Users]" UpdateCommand="UPDATE [Users] SET [username] = @username, [email] = @email, [password] = @password, [mobile_no] = @mobile_no WHERE [user_id] = @user_id">
             <DeleteParameters>
                 <asp:Parameter Name="user_id" Type="Int32" />
             </DeleteParameters>

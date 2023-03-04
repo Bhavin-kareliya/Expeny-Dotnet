@@ -18,26 +18,5 @@ namespace ExpenseManager
         {
 
         }
-
-        protected void submitData_Click(object sender, EventArgs e)
-        {
-            MailMessage mail = new MailMessage("bhavin.kareliya2017@gmail.com", email_invite.Text);
-            mail.Subject = "Invite To Join Blinq Expense Manager";
-
-            mail.Body = "https://localhost:44318/signup.aspx";
-
-            mail.IsBodyHtml = true;
-
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-
-            smtp.Credentials = new System.Net.NetworkCredential()
-            {
-                UserName = "bhavin.kareliya2017@gmail.com",
-                Password = "bkareliya09022002"
-            };
-
-            smtp.EnableSsl = true;
-            smtp.Send(mail);
-        }
     }
 }
