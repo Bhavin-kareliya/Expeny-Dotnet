@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin_header.master.cs" Inherits="ExpenseManager.Admin_header" %>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <asp:ContentPlaceHolder ID="linker" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="assests/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assests/css/style.css" rel="stylesheet">
+</head>
+
+<body class="app">
+    <div>
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <div class="sidebar-logo">
+                    <div class="peers ai-c fxw-nw">
+                        <div class="peer peer-greed"><a class="sidebar-link td-n" href="#">
+                                <div class="peers ai-c fxw-nw">
+                                    <div class="peer">
+                                        <div class="logo">
+                                            <img src="assests/images/b.png" alt="" height="40" width="40" style="margin-left: 13px;margin-top: 10px">
+                                        </div>
+                                    </div>
+                                    <div class="peer peer-greed">
+                                        <h5 class="lh-1 mB-0 logo-text">Blinq</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="peer">
+                            <div class="mobile-toggle sidebar-toggle"><a href="#" class="td-n"><i class="ti-arrow-circle-left"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="sidebar-menu scrollable pos-r">
+                    <li class="nav-item mT-30 active">
+                        <a class="sidebar-link" href="Admin_dashboard.aspx">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-home"></i>
+                            </span>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mT-30 active">
+                        <a class="sidebar-link" href="Manage_users.aspx">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-user"></i>
+                            </span>
+                            <span class="title">Users</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mT-30 active">
+                        <a class="sidebar-link" href="Manage_expense.aspx">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-write"></i>
+                            </span>
+                            <span class="title">Expense</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mT-30 active">
+                        <a class="sidebar-link" href="#">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-clipboard"></i>
+                            </span>
+                            <span class="title">Report</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mT-30 active">
+                        <a class="sidebar-link" href="graph.aspx">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-stats-up"></i>
+                            </span>
+                            <span class="title">Graph</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-container">
+            <div class="header navbar">
+                <div class="header-container">
+                    <ul class="nav-left">
+                        <li><a id="sidebar-toggle" class="sidebar-toggle" href="#"><i class="ti-menu"></i></a></li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li class="dropdown"><a href="#" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
+                                <div class="peer"><span class="fsz-sm c-grey-900">Bhavin Kareliya</span></div>
+                            </a>
+                            <ul class="dropdown-menu fsz-sm">
+                                <li><a href="#" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-user mR-10"></i> <span>Profile</span></a></li>
+                                <li><a href="#" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-email mR-10"></i> <span>Messages</span></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li onclick="Logout"><a href="Logout.aspx" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><span>Log Out</span></a></li></ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <main class="main-content bgc-grey-100">
+                <div class=" gap-20">
+                    <asp:ContentPlaceHolder ID="maincontent" runat="server">
+                    
+                    </asp:ContentPlaceHolder>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script type="ff7f6eb3a6fc68506d7a7cc6-text/javascript" src="assests/js/vendor.js"></script>
+    <script type="ff7f6eb3a6fc68506d7a7cc6-text/javascript" src="assests/js/bundle.js"></script>
+    <script src="assests/js/rocket-loader.min.js" data-cf-settings="ff7f6eb3a6fc68506d7a7cc6-|49" defer=""></script>
+</body>
+</html>
+
+<%--<script>
+        $(document).ready(function () {
+            $(document).on("click", ".Add", function () {
+                var rowCount = $('.user_adder').length + 1;
+                var adder = '<div class="row form-group user_adder">' +
+                    '<div class="col-9 ' + rowCount + '">' +
+                    '<asp:DropDownList runat="server" CssClass="form-control DropDownList1"></asp:DropDownList></div>' +
+                    '<div class="col-2"><asp:Button runat="server" Text="+" CssClass="form-control col-1 Add"/></div></div>';
+                $('.modal-body').append(adder);
+            });
+        });  
+    </script>--%>
