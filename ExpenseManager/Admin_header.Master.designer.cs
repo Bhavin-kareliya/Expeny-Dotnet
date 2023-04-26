@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExpenseManager {
-    
-    
-    public partial class Admin_header {
-        
+namespace ExpenseManager
+{
+
+
+    public partial class Admin_header
+    {
+
         /// <summary>
         /// linker control.
         /// </summary>
@@ -20,7 +22,16 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder linker;
-        
+
+        /// <summary>
+        /// UserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserName;
+
         /// <summary>
         /// maincontent control.
         /// </summary>

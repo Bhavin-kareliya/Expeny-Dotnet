@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace ExpenseManager
@@ -14,20 +8,20 @@ namespace ExpenseManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        }
-        protected void submitData_Click(object sender, EventArgs e)
-        {
-            Response.Write("<script>alert('come');</script>");
-            String exp_name = expense_name.Text;
-            String user = Users.SelectedValue;
 
-            SqlConnection connect = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ToString());
-            SqlCommand cmd = new SqlCommand("insert into expense_master values('1','"+expense_name.Text+"','1')", connect);
+        }
+        protected void SubmitBtnClick(object sender, EventArgs e)
+        {
+            string expName = Name.Text;
+            string expAmount = Amount.Text;
+
+            SqlConnection connect = new SqlConnection(ConfigurationManager.ConnectionStrings["ExpenyDbConnectionString"].ToString());
+            SqlCommand cmd = new SqlCommand("insert into Expenses (Name, Amount, CreatedAt) values('" + expName + "'," + expAmount + ", '" + DateTime.Now + "')", connect);
 
             connect.Open();
             cmd.ExecuteNonQuery();
             connect.Close();
+            GridView1.DataBind();
         }
     }
 }

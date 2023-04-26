@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <ul class="sidebar-menu scrollable pos-r">
-                    <li class="nav-item mT-30 active">
+                    <li class="nav-item mT-30 ">
                         <a class="sidebar-link" href="Admin_dashboard.aspx">
                             <span class="icon-holder">
                                 <i class="c-blue-500 ti-home"></i>
@@ -44,7 +44,7 @@
                             <span class="title">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item mT-30 active">
+                    <li class="nav-item mT-30 ">
                         <a class="sidebar-link" href="Manage_users.aspx">
                             <span class="icon-holder">
                                 <i class="c-blue-500 ti-user"></i>
@@ -52,7 +52,7 @@
                             <span class="title">Users</span>
                         </a>
                     </li>
-                    <li class="nav-item mT-30 active">
+                    <li class="nav-item mT-30 ">
                         <a class="sidebar-link" href="Manage_expense.aspx">
                             <span class="icon-holder">
                                 <i class="c-blue-500 ti-write"></i>
@@ -60,8 +60,18 @@
                             <span class="title">Expense</span>
                         </a>
                     </li>
-                    <li class="nav-item mT-30 active">
-                        <a class="sidebar-link" href="#">
+                    <li class="nav-item mT-30 ">
+                        <a class="sidebar-link" href="About_us.aspx">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-info"></i>
+                            </span>
+                            <span class="title">About us</span>
+                        </a>
+                    </li>
+                   <%-- <li class="nav-item mT-30 active">
+                        <a class="sidebar-link" href="#"><a href="Manage_users.aspx">Manage_users.aspx</a>
+<a href="Manage_users.aspx.cs">Manage_users.aspx.cs</a>
+<a href="Manage_users.aspx.designer.cs">Manage_users.aspx.designer.cs</a>
                             <span class="icon-holder">
                                 <i class="c-blue-500 ti-clipboard"></i>
                             </span>
@@ -75,7 +85,7 @@
                             </span>
                             <span class="title">Graph</span>
                         </a>
-                    </li>
+                    </li>--%>
                 </ul>
             </div>
         </div>
@@ -87,7 +97,7 @@
                     </ul>
                     <ul class="nav-right">
                         <li class="dropdown"><a href="#" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
-                                <div class="peer"><span class="fsz-sm c-grey-900">Bhavin Kareliya</span></div>
+                                <div class="peer"><span class="fsz-sm c-grey-900" id="UserName" runat="server"></span></div>
                             </a>
                             <ul class="dropdown-menu fsz-sm">
                                 <li><a href="#" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"><i class="ti-user mR-10"></i> <span>Profile</span></a></li>

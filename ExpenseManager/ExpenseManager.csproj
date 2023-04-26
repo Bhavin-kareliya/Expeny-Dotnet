@@ -83,6 +83,7 @@
     <Content Include="graph.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Manage_expense.aspx" />
+    <Content Include="About_us.aspx" />
     <Content Include="Manage_users.aspx" />
     <Content Include="resetPassword.aspx" />
     <Content Include="Signin.aspx" />
@@ -131,6 +132,13 @@
     </Compile>
     <Compile Include="Manage_expense.aspx.designer.cs">
       <DependentUpon>Manage_expense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About_us.aspx.cs">
+      <DependentUpon>About_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About_us.aspx.designer.cs">
+      <DependentUpon>About_us.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manage_users.aspx.cs">
       <DependentUpon>Manage_users.aspx</DependentUpon>

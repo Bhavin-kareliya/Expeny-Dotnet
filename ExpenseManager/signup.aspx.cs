@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 using System.Configuration;
-using System.Data;
+using System.Data.SqlClient;
 
 namespace ExpenseManager
 {
@@ -19,8 +13,8 @@ namespace ExpenseManager
 
         protected void btn_Click(object sender, EventArgs e)
         {
-            SqlConnection connect=new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("insert into Users values('"+full_name.Text+"','"+email.Text+"','"+password.Text+"','"+mobile_no.Text+"','')",connect);
+            SqlConnection connect = new SqlConnection(ConfigurationManager.ConnectionStrings["ExpenyDbConnectionString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("insert into Users(FirstName,LastName,Email,Password,Contact,DOB) values('" + first_name.Text.Trim() + "', '"+last_name.Text.Trim() + "',  '" + email.Text.Trim() + "','" + password.Text.Trim() + "','" + mobile_no.Text.Trim() + "', '"+DOB.Text+"')", connect);
             connect.Open();
             cmd.ExecuteNonQuery();
             Response.Redirect("~/signin.aspx");

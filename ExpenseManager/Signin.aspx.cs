@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace ExpenseManager
 {
@@ -14,30 +9,31 @@ namespace ExpenseManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["email"] != null)
+            {
+                Response.Redirect("~/Admin_dashboard.aspx");
+            }
             error.Visible = false;
         }
 
         protected void button_Click(object sender, EventArgs e)
         {
-            string cs = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+            string cs = ConfigurationManager.ConnectionStrings["ExpenyDbConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(cs);
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("select email,password from Users", con);
-            cmd.ExecuteNonQuery();
+            string query = "select FirstName,LastName,Email,DOB from Users where Email='" + email1.Text + "' and Password= " + password1.Text;
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader rd = cmd.ExecuteReader();
 
-            SqlDataAdapter adp = new SqlDataAdapter(cmd);
-
-            DataTable dt = new DataTable();
-            adp.Fill(dt);
-
-            foreach (DataRow dr in dt.Rows)
+            while (rd.Read())
             {
-
-                if (dr["email"].ToString().Trim() == email1.Text && dr["password"].ToString().Trim() == password1.Text)
+                if (rd.HasRows)
                 {
-
-                    Session["email"] = email1.Text;
+                    Session["full_name"] = rd[0] + " " + rd[1];
+                    Session["email"] = rd[2];
+                    Session["DOB"] = rd[3];
+                    
                     Response.Redirect("~/Admin_dashboard.aspx");
                 }
                 else
@@ -45,8 +41,9 @@ namespace ExpenseManager
                     error.Visible = true;
                 }
             }
+
         }
-            
+
         protected void forget_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/forgetPassword.aspx");

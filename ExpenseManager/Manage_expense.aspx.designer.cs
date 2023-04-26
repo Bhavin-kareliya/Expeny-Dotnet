@@ -7,29 +7,58 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExpenseManager {
-    
-    
-    public partial class Manage_expense {
-        
+namespace ExpenseManager
+{
+
+
+    public partial class Manage_expense
+    {
+
         /// <summary>
-        /// expense_name control.
+        /// Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox expense_name;
-        
+        protected global::System.Web.UI.WebControls.TextBox Name;
+
         /// <summary>
-        /// Users control.
+        /// reqName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Users;
-        
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqName;
+
+        /// <summary>
+        /// Amount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Amount;
+
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
+        /// TextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+
         /// <summary>
         /// submitData control.
         /// </summary>
@@ -38,7 +67,7 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submitData;
-        
+
         /// <summary>
         /// GridView1 control.
         /// </summary>
@@ -47,14 +76,14 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-        
+
         /// <summary>
-        /// Expense_Data control.
+        /// ExpenySource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Expense_Data;
+        protected global::System.Web.UI.WebControls.SqlDataSource ExpenySource;
     }
 }
