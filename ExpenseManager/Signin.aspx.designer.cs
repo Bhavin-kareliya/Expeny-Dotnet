@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExpenseManager {
-    
-    
-    public partial class Signin {
-        
+namespace ExpenseManager
+{
+
+
+    public partial class Signin
+    {
+
         /// <summary>
         /// error control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label error;
-        
+
         /// <summary>
         /// em_validator control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator em_validator;
-        
+
         /// <summary>
         /// email1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox email1;
-        
+
         /// <summary>
         /// pass_validator control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator pass_validator;
-        
+
         /// <summary>
         /// password1 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox password1;
-        
+
         /// <summary>
         /// button control.
         /// </summary>
@@ -65,14 +67,5 @@ namespace ExpenseManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button button;
-        
-        /// <summary>
-        /// forget control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button forget;
     }
 }

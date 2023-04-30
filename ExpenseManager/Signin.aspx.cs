@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace ExpenseManager
@@ -16,13 +15,13 @@ namespace ExpenseManager
             error.Visible = false;
         }
 
-        protected void button_Click(object sender, EventArgs e)
+        protected void buttonClick(object sender, EventArgs e)
         {
             string cs = ConfigurationManager.ConnectionStrings["ExpenyDbConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(cs);
 
             con.Open();
-            string query = "select FirstName,LastName,Email,DOB from Users where Email='" + email1.Text + "' and Password= " + password1.Text;
+            string query = "select Id,FirstName,LastName,Email,DOB from Users where Email='" + email1.Text + "' and Password= " + password1.Text;
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader rd = cmd.ExecuteReader();
 
@@ -30,10 +29,12 @@ namespace ExpenseManager
             {
                 if (rd.HasRows)
                 {
-                    Session["full_name"] = rd[0] + " " + rd[1];
-                    Session["email"] = rd[2];
-                    Session["DOB"] = rd[3];
-                    
+                    Session["id"] = rd[0];
+                    Session["first_name"] = rd[1];
+                    Session["last_name"] = rd[2];
+                    Session["email"] = rd[3];
+                    Session["DOB"] = rd[4];
+
                     Response.Redirect("~/Admin_dashboard.aspx");
                 }
                 else
@@ -44,7 +45,7 @@ namespace ExpenseManager
 
         }
 
-        protected void forget_Click(object sender, EventArgs e)
+        protected void signupClick(object sender, EventArgs e)
         {
             Response.Redirect("~/forgetPassword.aspx");
         }

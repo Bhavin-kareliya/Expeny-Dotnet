@@ -5,9 +5,16 @@
     <title>User Manager</title>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">
-    <h1 style="margin-bottom: 5px">Who we are?</h1>
-    <h3 style="margin-bottom: 10px">Service that we provide!</h3>
-    <p>&emsp;&emsp;&emsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-    <p>&emsp;&emsp;&emsp;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+<asp:Content ID="Content3" ContentPlaceHolderID="mainContent" runat="server">
+    <h1 style="margin-bottom: 5px" class="text-black-90">Who we are?</h1>
+    <h3 style="margin-bottom: 10px" class="text-black-90">Service that we provide!</h3>
+    <p style="font-size:18px;text-align:justify;" class="text-black-50">&emsp;&emsp;&emsp;Across 8+ years, Expeny Expense has helped thousands of businesses gain complete control over spending, and get crucial financial insights to stay two steps ahead. <br />
+    
+        &emsp;&emsp;&emsp;Expense management is a multi-step process that includes capturing and submitting expenses, which can involve: submitting reimbursement claims, approving or denying those claims, scheduling the claims for payment, and, finally, reimbursing the employee.
+
+With the right process in place, companies can monitor their spending, ensure employees aren’t abusing the system, and take quick corrective action if they are (e.g., letting individual employees know that they’re spending more than they should be in specific areas). If, for example, a salesperson has been flying first class without prior approval to do so, a quick check of his or her receipts will reveal the violation.
+
+It can be difficult to find these issues with manual systems, particularly for a company with a growing team of field workers. Missing information, approval of spending without a thorough review and slow approvals are all common issues. This not only wastes employees’ time but also leaves employees wondering where their expense checks are (often as they’re already racking up new expenses for the next closing period).
+
+    </p>
 </asp:Content>

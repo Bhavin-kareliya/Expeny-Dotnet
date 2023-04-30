@@ -18,8 +18,9 @@
     <asp:RequiredFieldValidator ID="pass_validator" runat="server" ControlToValidate ="password1" ErrorMessage="**Password Required**" Display="Dynamic" ForeColor="red"></asp:RequiredFieldValidator>
     <asp:TextBox runat="server" id="password1" type="password" class="form-control" placeholder="Password" AutoCompleteType="Disabled"/>
 
-    <asp:Button id="button" runat="server" CssClass="btn btn-dark" Text="Sign In" OnClick="button_Click"/>
-    <asp:Button id="forget" runat="server" CssClass="btn btn-dark" Text="Forgot Password" OnClick="forget_Click"/> 
+    <asp:Button id="button" runat="server" CssClass="btn btn-dark" Text="Sign In" OnClick="buttonClick"/>
+    <p class="mt-2 ">Don't have an account? <a href="signup.aspx" class="text-black">Register now!</a></p>
+
 
 
 </asp:Content>

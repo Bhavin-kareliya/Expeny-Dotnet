@@ -46,4 +46,6 @@
     <asp:TextBox Rows="3" TextMode="MultiLine" runat="server" ID="Address" class="form-control"></asp:TextBox>
 
     <asp:Button id="btn" runat="server" CssClass="btn btn-dark"  Text="Sign Up" OnClick="btn_Click"/>
+    <p class="mt-2 ">Already registered? <a href="Signin.aspx" class="text-black">Log In</a></p>
+
 </asp:Content>

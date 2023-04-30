@@ -23,6 +23,8 @@ namespace ExpenseManager
                 }
 
             }
+            this.userName.InnerText = $"Welcome {Session["first_name"]}  {Session["last_name"]}";
+
         }
     }
 
