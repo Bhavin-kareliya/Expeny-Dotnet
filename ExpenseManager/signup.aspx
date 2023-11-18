@@ -28,7 +28,8 @@
 
     <asp:RegularExpressionValidator ID="EmailValidator" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="email" ErrorMessage="**Invalid Email Format**" Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
     <asp:RequiredFieldValidator ID="em_validator" runat="server" ControlToValidate ="email" ErrorMessage="**Email Required**" Display="Dynamic" ForeColor="red"></asp:RequiredFieldValidator>
-    <asp:TextBox runat="server" id="email" type="email" class="form-control" placeholder="Your Email"  />
+    <asp:TextBox ID="email_exists" runat="server" Display="Dynamic" ForeColor="red">**This email already exists**</asp:TextBox>
+    <asp:TextBox runat="server" id="email" type="email" class="form-control" placeholder="Your Email" OnTextChanged="email_TextChanged"/>
 
     <asp:RequiredFieldValidator ID="pass_validator" runat="server" ControlToValidate ="password" ErrorMessage="**Password Required**" Display="Dynamic" ForeColor="red"></asp:RequiredFieldValidator>
     <asp:TextBox runat="server" id="password" type="password" class="form-control" placeholder="Password"/>

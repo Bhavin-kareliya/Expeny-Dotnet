@@ -69,6 +69,15 @@ namespace ExpenseManager
         protected global::System.Web.UI.WebControls.RequiredFieldValidator em_validator;
 
         /// <summary>
+        /// email_exists control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox email_exists;
+
+        /// <summary>
         /// email control.
         /// </summary>
         /// <remarks>
